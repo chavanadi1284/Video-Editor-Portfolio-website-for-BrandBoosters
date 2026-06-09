@@ -24,7 +24,7 @@ export default function Showreel() {
       desc: 'Our flagship compilation demonstrating cinematic storytelling, structural pacing, soundscapes, and comprehensive post-production direction.',
       category: 'Master Reel',
       thumbnail: '/showreel_thumbnail.png',
-      videoUrl: 'https://www.youtube.com/embed/_8nO4rpeo0E?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/iJ_y1H5_QhM?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '1:45',
       icon: Film
@@ -36,7 +36,7 @@ export default function Showreel() {
       desc: 'High-impact product ads and commercial campaigns. Focuses on razor-sharp visual transitions, speed-ramping, and brand storytelling.',
       category: 'Commercials',
       thumbnail: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/y9j-NF99r3o?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/FqS_wM00uL0?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '1:10',
       icon: Zap
@@ -48,7 +48,7 @@ export default function Showreel() {
       desc: 'Staged vertical clips designed for modern platforms. We show our dynamic caption workflows, animation overlays, and attention-retention cuts.',
       category: 'Verticals',
       thumbnail: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://player.vimeo.com/video/517616641?autoplay=1&loop=1',
+      videoUrl: 'https://www.youtube.com/embed/IbiN9xldVlM?autoplay=1&rel=0',
       aspectRatio: '9:16',
       duration: '0:45',
       icon: Layers
@@ -60,7 +60,7 @@ export default function Showreel() {
       desc: 'Showcasing raw LOG files color-matched and stylized into rich, atmospheric color environments. Includes camera solves and tracking integrations.',
       category: 'Color & VFX',
       thumbnail: '/graded_car.png',
-      videoUrl: 'https://www.youtube.com/embed/y9j-NF99r3o?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/UXqq0ZvbOnk?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '1:20',
       icon: Palette

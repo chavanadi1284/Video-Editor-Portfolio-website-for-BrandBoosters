@@ -26,7 +26,7 @@ export default function VideoGrid() {
       client: 'Nike Global',
       category: 'commercial',
       thumbnail: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/y9j-NF99r3o?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/UXqq0ZvbOnk?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '0:45'
     },
@@ -36,7 +36,7 @@ export default function VideoGrid() {
       client: 'Acquisition.com',
       category: 'short',
       thumbnail: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://player.vimeo.com/video/517616641?autoplay=1&loop=1',
+      videoUrl: 'https://www.youtube.com/embed/IbiN9xldVlM?autoplay=1&rel=0',
       aspectRatio: '9:16',
       duration: '0:30'
     },
@@ -46,7 +46,7 @@ export default function VideoGrid() {
       client: 'MKBHD Studios',
       category: 'long',
       thumbnail: 'https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/y9j-NF99r3o?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/iJ_y1H5_QhM?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '12:40'
     },
@@ -56,7 +56,7 @@ export default function VideoGrid() {
       client: 'Apex Labs',
       category: 'commercial',
       thumbnail: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/y9j-NF99r3o?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/FqS_wM00uL0?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '1:00'
     },
@@ -66,7 +66,7 @@ export default function VideoGrid() {
       client: 'Gadzhi Media',
       category: 'short',
       thumbnail: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://player.vimeo.com/video/517616641?autoplay=1&loop=1',
+      videoUrl: 'https://www.youtube.com/embed/IbiN9xldVlM?autoplay=1&rel=0',
       aspectRatio: '9:16',
       duration: '0:55'
     },
@@ -76,7 +76,7 @@ export default function VideoGrid() {
       client: 'Independent Release',
       category: 'long',
       thumbnail: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/y9j-NF99r3o?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/r6MlUcmOul8?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '8:15'
     }

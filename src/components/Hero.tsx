@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="absolute inset-0 w-full h-full opacity-35 pointer-events-none overflow-hidden scale-[1.15]">
           <iframe
             className="w-full h-full pointer-events-none border-0"
-            src="https://www.youtube.com/embed/y9j-NF99r3o?autoplay=1&mute=1&loop=1&playlist=y9j-NF99r3o&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+            src="https://www.youtube.com/embed/FqS_wM00uL0?autoplay=1&mute=1&loop=1&playlist=FqS_wM00uL0&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
             title="Background Video Loop"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             frameBorder="0"

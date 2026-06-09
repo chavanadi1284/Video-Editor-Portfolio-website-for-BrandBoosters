@@ -24,7 +24,7 @@ export default function Showreel() {
       desc: 'Our flagship compilation demonstrating cinematic storytelling, structural pacing, soundscapes, and comprehensive post-production direction.',
       category: 'Master Reel',
       thumbnail: '/showreel_thumbnail.png',
-      videoUrl: 'https://www.youtube.com/embed/-dr-wvPjGFo?autoplay=1&rel=0',
+      videoUrl: 'https://www.youtube.com/embed/_8nO4rpeo0E?autoplay=1&rel=0',
       aspectRatio: '16:9',
       duration: '1:45',
       icon: Film

@@ -19,29 +19,30 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black px-4 sm:px-6 lg:px-8">
-      {/* Layered Background: Cinematic Image + Screen-Blended Video Loop */}
+      {/* Layered Background: YouTube Iframe Loop + Blended Backdrop */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         {/* Dark Vignettes & Red Ambient Halo */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/75 to-brand-black z-10" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,9,20,0.14)_0%,transparent_60%)] z-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,9,20,0.12)_0%,transparent_60%)] z-10" />
         
         {/* Generated Cinematic Backdrop */}
         <img
           src="/hero_bg.png"
           alt="Cinematic Editing Studio"
-          className="w-full h-full object-cover opacity-35 scale-[1.04] transition-transform duration-1000"
+          className="w-full h-full object-cover opacity-25 scale-[1.04]"
           loading="eager"
         />
         
-        {/* Floating dust particles / light beam loop */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-screen"
-          src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c02cba73e1c8578519992011326c7104&profile_id=165&oauth2_token_id=57447761"
-        />
+        {/* Looping YouTube Showreel Background (Scaled to hide player UI) */}
+        <div className="absolute inset-0 w-full h-full opacity-20 mix-blend-screen pointer-events-none overflow-hidden scale-[1.15]">
+          <iframe
+            className="w-full h-full pointer-events-none border-0 scale-[1.05]"
+            src="https://www.youtube.com/embed/-dr-wvPjGFo?autoplay=1&mute=1&loop=1&playlist=-dr-wvPjGFo&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1"
+            title="Background Video Loop"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            frameBorder="0"
+          />
+        </div>
       </div>
 
       {/* Hero Content */}

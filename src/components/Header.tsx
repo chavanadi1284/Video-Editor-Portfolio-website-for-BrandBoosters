@@ -39,6 +39,7 @@ export default function Header() {
     { name: 'Showreel', target: 'showreel' },
     { name: 'Services', target: 'services' },
     { name: 'Portfolio', target: 'portfolio' },
+    { name: 'Feedback', target: 'feedback' },
     { name: 'Estimate', target: 'contact' }
   ]
 

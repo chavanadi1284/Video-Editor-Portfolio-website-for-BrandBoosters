@@ -7,6 +7,7 @@ import Showreel from './components/Showreel'
 import Services from './components/Services'
 import Brands from './components/Brands'
 import VideoGrid from './components/VideoGrid'
+import Feedback from './components/Feedback'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -30,7 +31,7 @@ function App() {
         {/* Hero Banner w/ Ambient Video Loop */}
         <Hero />
 
-        {/* Cinema Player Master Showreel */}
+        {/* Cinema Player Master Showreel (Interactive selector list) */}
         <Showreel />
 
         {/* Core Services w/ Live Interactive Preview & Before/After Slider */}
@@ -41,6 +42,9 @@ function App() {
 
         {/* Facade-optimized filterable portfolio grid */}
         <VideoGrid />
+
+        {/* Client reviews and live feedback submission */}
+        <Feedback />
 
         {/* High-impact project estimation form */}
         <Contact />

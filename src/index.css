@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Outfit', sans-serif;
+  
+  --color-brand-black: #000000;
+  --color-brand-dark: #0a0a0c;
+  --color-brand-gray: #16161a;
+  --color-brand-red: #e50914;
+  --color-brand-red-dark: #8c060d;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Premium Agency Utilities */
+
+/* Subtle Text Glow - More refined, soft */
+.text-glow-red {
+  text-shadow: 0 0 6px rgba(229, 9, 20, 0.4);
+}
+
+.text-glow-red-strong {
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+}
+
+/* Elegant Thin Border Glow */
+.glow-border {
+  border: 1px solid rgba(229, 9, 20, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-border:hover {
+  border-color: rgba(229, 9, 20, 0.4);
+  box-shadow: 0 4px 30px rgba(229, 9, 20, 0.08);
+  background-color: rgba(10, 10, 12, 0.8);
+}
+
+/* Ambient Radial Glows (Background spotlights) */
+.ambient-spotlight {
+  background: radial-gradient(circle at center, rgba(229, 9, 20, 0.04) 0%, transparent 70%);
+}
+
+/* Custom Scrollbar - Sleek and minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c1c1f;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e50914;
+}
+
+/* Hide default cursor on desktop */
+@media (min-width: 1024px) {
+  body.custom-cursor-active, 
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Before/After Color Grading Slider Handle */
+.slider-handle {
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border: 2px solid #e50914;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+  pointer-events: none;
+  z-index: 30;
+}
+
+/* Shimmer overlay for loading assets */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #0a0a0c 25%, #16161a 50%, #0a0a0c 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s infinite;
+}
+
+/* Fade-in Animation for Modals */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Header from './components/Header'
-import Cursor from './components/Cursor'
 import Preloader from './components/Preloader'
 import Hero from './components/Hero'
 import Showreel from './components/Showreel'
@@ -19,9 +18,6 @@ function App() {
       
       {/* Cinematic Intro Preloader */}
       {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
-
-      {/* Custom Glowing Cursor (interactive desktop only) */}
-      <Cursor />
 
       {/* Floating Glassmorphic Navigation */}
       <Header />

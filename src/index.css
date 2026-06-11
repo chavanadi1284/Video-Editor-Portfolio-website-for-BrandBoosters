@@ -77,13 +77,6 @@
   background: #e50914;
 }
 
-/* Hide default cursor on desktop */
-@media (min-width: 1024px) {
-  body.custom-cursor-active, 
-  body.custom-cursor-active * {
-    cursor: none !important;
-  }
-}
 
 /* Marquee Animation */
 @keyframes marquee {

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Play, X, SlidersHorizontal } from 'lucide-react'
 import ScrollReveal from './ScrollReveal'
 
-type Category = 'all' | 'short' | 'long' | 'commercial'
+type Category = 'all' | 'reels_campaigns' | 'saas_videos' | 'intro_videos' | 'client_projects'
 
 interface VideoItem {
   id: string
@@ -20,65 +20,159 @@ export default function VideoGrid() {
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
 
   const portfolioItems: VideoItem[] = [
+    // ReelsCampaigns
     {
-      id: '1',
-      title: 'Nike Running — Speed Re-engineered',
-      client: 'Nike Global',
-      category: 'commercial',
-      thumbnail: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/UXqq0ZvbOnk?autoplay=1&rel=0',
-      aspectRatio: '16:9',
-      duration: '0:45'
-    },
-    {
-      id: '2',
-      title: 'Strategic Vertical Hook Architecture',
-      client: 'Acquisition.com',
-      category: 'short',
-      thumbnail: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/IbiN9xldVlM?autoplay=1&rel=0',
+      id: 'rc1',
+      title: 'DAY1 FINAL',
+      client: 'BrandBoosters',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1kt04t1pHMq5o4abpLrUtCK_WBRPhmu_T/preview',
       aspectRatio: '9:16',
       duration: '0:30'
     },
     {
-      id: '3',
-      title: 'Workspace Architecture Showcase',
-      client: 'MKBHD Studios',
-      category: 'long',
-      thumbnail: 'https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/iJ_y1H5_QhM?autoplay=1&rel=0',
-      aspectRatio: '16:9',
-      duration: '12:40'
+      id: 'rc2',
+      title: 'Day 2 ZOMATO',
+      client: 'Zomato',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1pAGnVhUabToauSTHxSau9XpXMK22PDVs/preview',
+      aspectRatio: '9:16',
+      duration: '0:45'
     },
     {
-      id: '4',
-      title: 'Apex Labs — Product Launch Campaign',
-      client: 'Apex Labs',
-      category: 'commercial',
-      thumbnail: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/FqS_wM00uL0?autoplay=1&rel=0',
-      aspectRatio: '16:9',
+      id: 'rc3',
+      title: 'Day 3 nayka',
+      client: 'Nykaa',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/14IkuaXeIKzmkkcHjbxn9XwnTbL38rxIv/preview',
+      aspectRatio: '9:16',
+      duration: '0:40'
+    },
+    {
+      id: 'rc4',
+      title: 'Day 4',
+      client: 'BrandBoosters',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/166eyh1yWDC_SOkIUKSGVMQbPyXfcf9wP/preview',
+      aspectRatio: '9:16',
+      duration: '0:35'
+    },
+    {
+      id: 'rc5',
+      title: 'DAY 5 FINAL',
+      client: 'BrandBoosters',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/17zsi8F7E3MXxUvBaw60NkH2qpxISuigl/preview',
+      aspectRatio: '9:16',
+      duration: '0:50'
+    },
+    {
+      id: 'rc6',
+      title: 'DAY6',
+      client: 'BrandBoosters',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1ildcHXfal40CLFs5qu9OTHQOwkAm1yZg/preview',
+      aspectRatio: '9:16',
+      duration: '0:45'
+    },
+    {
+      id: 'rc7',
+      title: 'DAY7mp4',
+      client: 'BrandBoosters',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1pkP_AQ-ziAlXid6weQrRgazF6r4uSL7T/preview',
+      aspectRatio: '9:16',
+      duration: '0:30'
+    },
+    {
+      id: 'rc8',
+      title: 'DAY8',
+      client: 'BrandBoosters',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1502472545319-9a2df6ef72e8?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1J5-vH8Wy9qPANtfgaTvp6YdpL3uwBmMr/preview',
+      aspectRatio: '9:16',
       duration: '1:00'
     },
     {
-      id: '5',
-      title: 'Executive Development Series',
-      client: 'Gadzhi Media',
-      category: 'short',
-      thumbnail: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/IbiN9xldVlM?autoplay=1&rel=0',
-      aspectRatio: '9:16',
-      duration: '0:55'
+      id: 'rc9',
+      title: 'CAMPAIGN 1',
+      client: 'BrandBoosters',
+      category: 'reels_campaigns',
+      thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/19hgtjKim0h5UShqUOSSQNDENFb1-8Wyg/preview',
+      aspectRatio: '16:9',
+      duration: '1:30'
+    },
+    // SaaS Videos
+    {
+      id: 'sv1',
+      title: 'SAAS VIDEO WITH SFX',
+      client: 'SaaS Client',
+      category: 'saas_videos',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1K-9ySQlYb-ICJ307dZ30f9IdOEySQCAR/preview',
+      aspectRatio: '16:9',
+      duration: '2:15'
     },
     {
-      id: '6',
-      title: 'The Last Artisan — Short Film Documentary',
-      client: 'Independent Release',
-      category: 'long',
-      thumbnail: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format&fit=crop',
-      videoUrl: 'https://www.youtube.com/embed/r6MlUcmOul8?autoplay=1&rel=0',
+      id: 'sv2',
+      title: 'Service video',
+      client: 'Enterprise Client',
+      category: 'saas_videos',
+      thumbnail: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc/preview',
       aspectRatio: '16:9',
-      duration: '8:15'
+      duration: '1:45'
+    },
+    // Intro Videos
+    {
+      id: 'iv1',
+      title: 'INTRO VIDEO',
+      client: 'BrandBoosters',
+      category: 'intro_videos',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG/preview',
+      aspectRatio: '16:9',
+      duration: '0:15'
+    },
+    {
+      id: 'iv2',
+      title: 'INTRO TIMELINE EDIT',
+      client: 'BrandBoosters',
+      category: 'intro_videos',
+      thumbnail: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k/preview',
+      aspectRatio: '16:9',
+      duration: '0:25'
+    },
+    {
+      id: 'iv3',
+      title: 'TIME LINE EDIT',
+      client: 'BrandBoosters',
+      category: 'intro_videos',
+      thumbnail: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p/preview',
+      aspectRatio: '16:9',
+      duration: '0:35'
+    },
+    // Client Projects
+    {
+      id: 'cp1',
+      title: 'Athrav Final V2',
+      client: 'Athrav',
+      category: 'client_projects',
+      thumbnail: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop',
+      videoUrl: 'https://drive.google.com/file/d/1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP/preview',
+      aspectRatio: '16:9',
+      duration: '3:45'
     }
   ]
 
@@ -111,7 +205,7 @@ export default function VideoGrid() {
                 <SlidersHorizontal className="w-3.5 h-3.5" />
                 FILTER
               </div>
-              {(['all', 'short', 'long', 'commercial'] as const).map((filter) => (
+              {(['all', 'reels_campaigns', 'saas_videos', 'intro_videos', 'client_projects'] as const).map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
@@ -122,9 +216,10 @@ export default function VideoGrid() {
                   }`}
                 >
                   {filter === 'all' && 'All Projects'}
-                  {filter === 'short' && 'Vertical Social'}
-                  {filter === 'long' && 'Narrative & Docs'}
-                  {filter === 'commercial' && 'Commercials'}
+                  {filter === 'reels_campaigns' && 'ReelsCampaigns'}
+                  {filter === 'saas_videos' && 'SaaS Videos'}
+                  {filter === 'intro_videos' && 'Intro Videos'}
+                  {filter === 'client_projects' && 'Client Projects'}
                 </button>
               ))}
             </div>
@@ -177,9 +272,10 @@ export default function VideoGrid() {
                 {/* Text Meta Content */}
                 <div className="p-5 bg-zinc-950/40 border-t border-zinc-900/20">
                   <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
-                    {item.category === 'short' && 'Retention Strategy'}
-                    {item.category === 'long' && 'Narrative Production'}
-                    {item.category === 'commercial' && 'Brand Campaign'}
+                    {item.category === 'reels_campaigns' && 'Reels & Campaigns'}
+                    {item.category === 'saas_videos' && 'SaaS Product Video'}
+                    {item.category === 'intro_videos' && 'Timeline & Intros'}
+                    {item.category === 'client_projects' && 'Client Production'}
                   </span>
                   <h3 className="text-sm sm:text-base font-bold text-white tracking-tight uppercase group-hover:text-brand-red transition-colors duration-300 truncate">
                     {item.title}
@@ -236,13 +332,15 @@ export default function VideoGrid() {
                 <div className="w-full md:w-80 p-6 md:p-8 flex flex-col justify-between bg-zinc-950 border-t md:border-t-0 md:border-l border-zinc-900 text-left">
                   <div>
                     <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
-                      Vertical Social Strategy
+                      {selectedVideo.category === 'reels_campaigns' ? 'Reels & Campaigns' : 'Vertical Social Strategy'}
                     </span>
                     <h3 className="text-lg font-black uppercase text-white tracking-tight leading-snug">
                       {selectedVideo.title}
                     </h3>
                     <p className="text-xs text-zinc-400 mt-4 leading-relaxed font-light">
-                      This mobile-first vertical asset was engineered to bypass early feed drop-offs. Using custom speed ramping, dynamic vector text frames, and clean sound bridges, the average watch duration was boosted to maximize feed reach.
+                      {selectedVideo.category === 'reels_campaigns'
+                        ? 'High-impact short-form creative engineered for maximum audience retention, rapid pacing, and viral visibility.'
+                        : 'This mobile-first vertical asset was engineered to bypass early feed drop-offs. Using custom speed ramping, dynamic text frames, and clean sound bridges.'}
                     </p>
                   </div>
                   

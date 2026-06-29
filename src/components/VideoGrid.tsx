@@ -26,7 +26,7 @@ export default function VideoGrid() {
       title: 'DAY1 FINAL',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1kt04t1pHMq5o4abpLrUtCK_WBRPhmu_T&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1kt04t1pHMq5o4abpLrUtCK_WBRPhmu_T/preview',
       aspectRatio: '9:16',
       duration: '0:30'
@@ -36,7 +36,7 @@ export default function VideoGrid() {
       title: 'Day 2 ZOMATO',
       client: 'Zomato',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1pAGnVhUabToauSTHxSau9XpXMK22PDVs&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1pAGnVhUabToauSTHxSau9XpXMK22PDVs/preview',
       aspectRatio: '9:16',
       duration: '0:45'
@@ -46,7 +46,7 @@ export default function VideoGrid() {
       title: 'Day 3 nayka',
       client: 'Nykaa',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=14IkuaXeIKzmkkcHjbxn9XwnTbL38rxIv&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/14IkuaXeIKzmkkcHjbxn9XwnTbL38rxIv/preview',
       aspectRatio: '9:16',
       duration: '0:40'
@@ -56,7 +56,7 @@ export default function VideoGrid() {
       title: 'Day 4',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=166eyh1yWDC_SOkIUKSGVMQbPyXfcf9wP&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/166eyh1yWDC_SOkIUKSGVMQbPyXfcf9wP/preview',
       aspectRatio: '9:16',
       duration: '0:35'
@@ -66,7 +66,7 @@ export default function VideoGrid() {
       title: 'DAY 5 FINAL',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=17zsi8F7E3MXxUvBaw60NkH2qpxISuigl&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/17zsi8F7E3MXxUvBaw60NkH2qpxISuigl/preview',
       aspectRatio: '9:16',
       duration: '0:50'
@@ -76,7 +76,7 @@ export default function VideoGrid() {
       title: 'DAY6',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1ildcHXfal40CLFs5qu9OTHQOwkAm1yZg&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1ildcHXfal40CLFs5qu9OTHQOwkAm1yZg/preview',
       aspectRatio: '9:16',
       duration: '0:45'
@@ -86,7 +86,7 @@ export default function VideoGrid() {
       title: 'DAY7mp4',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1pkP_AQ-ziAlXid6weQrRgazF6r4uSL7T&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1pkP_AQ-ziAlXid6weQrRgazF6r4uSL7T/preview',
       aspectRatio: '9:16',
       duration: '0:30'
@@ -96,7 +96,7 @@ export default function VideoGrid() {
       title: 'DAY8',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1J5-vH8Wy9qPANtfgaTvp6YdpL3uwBmMr&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1502472545319-9a2df6ef72e8?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1J5-vH8Wy9qPANtfgaTvp6YdpL3uwBmMr/preview',
       aspectRatio: '9:16',
       duration: '1:00'
@@ -106,7 +106,7 @@ export default function VideoGrid() {
       title: 'CAMPAIGN 1',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://drive.google.com/thumbnail?id=19hgtjKim0h5UShqUOSSQNDENFb1-8Wyg&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/19hgtjKim0h5UShqUOSSQNDENFb1-8Wyg/preview',
       aspectRatio: '16:9',
       duration: '1:30'
@@ -117,7 +117,7 @@ export default function VideoGrid() {
       title: 'SAAS VIDEO WITH SFX',
       client: 'SaaS Client',
       category: 'saas_videos',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1K-9ySQlYb-ICJ307dZ30f9IdOEySQCAR&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1K-9ySQlYb-ICJ307dZ30f9IdOEySQCAR/preview',
       aspectRatio: '16:9',
       duration: '2:15'
@@ -127,7 +127,7 @@ export default function VideoGrid() {
       title: 'Service video',
       client: 'Enterprise Client',
       category: 'saas_videos',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc/preview',
       aspectRatio: '9:16',
       duration: '1:45'
@@ -138,7 +138,7 @@ export default function VideoGrid() {
       title: 'INTRO VIDEO',
       client: 'BrandBoosters',
       category: 'intro_videos',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG/preview',
       aspectRatio: '9:16',
       duration: '0:15'
@@ -148,7 +148,7 @@ export default function VideoGrid() {
       title: 'INTRO TIMELINE EDIT',
       client: 'BrandBoosters',
       category: 'intro_videos',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k/preview',
       aspectRatio: '9:16',
       duration: '0:25'
@@ -158,7 +158,7 @@ export default function VideoGrid() {
       title: 'TIME LINE EDIT',
       client: 'BrandBoosters',
       category: 'intro_videos',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p/preview',
       aspectRatio: '9:16',
       duration: '0:35'
@@ -169,7 +169,7 @@ export default function VideoGrid() {
       title: 'Athrav Final V2',
       client: 'Athrav',
       category: 'client_projects',
-      thumbnail: 'https://drive.google.com/thumbnail?id=1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP&sz=w800',
+      thumbnail: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop',
       videoUrl: 'https://drive.google.com/file/d/1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP/preview',
       aspectRatio: '9:16',
       duration: '3:45'
@@ -227,70 +227,66 @@ export default function VideoGrid() {
         </ScrollReveal>
 
         {/* Video Portfolio Grid */}
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 [column-fill:_balance]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item, idx) => (
-            <div key={item.id} className="break-inside-avoid mb-8">
-              <ScrollReveal delay={100 * (idx % 3)}>
-                <div
-                  onClick={() => setSelectedVideo(item)}
-                  className="group cursor-pointer bg-zinc-950/30 border border-zinc-900 hover:border-zinc-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.01] flex flex-col glow-border"
-                >
-                  {/* Media Container (Dynamic Aspect Ratio for vertical vs widescreen) */}
-                  <div className={`relative bg-zinc-950 overflow-hidden w-full ${
-                    item.aspectRatio === '9:16' ? 'aspect-[9/16]' : 'aspect-video'
-                  }`}>
-                    {/* Lazy-loaded Cover Thumbnail */}
-                    <img
-                      src={item.thumbnail}
-                      alt={item.title}
-                      className="w-full h-full object-cover opacity-75 group-hover:opacity-85 group-hover:scale-103 transition-all duration-700"
-                      loading="lazy"
-                    />
-                    
-                    {/* Vignette Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10 pointer-events-none" />
+            <ScrollReveal key={item.id} delay={100 * (idx % 3)}>
+              <div
+                onClick={() => setSelectedVideo(item)}
+                className="group cursor-pointer bg-zinc-950/30 border border-zinc-900 hover:border-zinc-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.01] flex flex-col justify-between glow-border"
+              >
+                {/* Media Container (Uniform widescreen aspect ratio for clean presentation) */}
+                <div className="relative aspect-video bg-zinc-950 overflow-hidden w-full">
+                  {/* Lazy-loaded Cover Thumbnail */}
+                  <img
+                    src={item.thumbnail}
+                    alt={item.title}
+                    className="w-full h-full object-cover opacity-75 group-hover:opacity-85 group-hover:scale-103 transition-all duration-700"
+                    loading="lazy"
+                  />
+                  
+                  {/* Vignette Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10 pointer-events-none" />
 
-                    {/* Duration Badge */}
-                    <div className="absolute bottom-3 right-3 bg-black/80 border border-zinc-900 text-[9px] font-mono text-zinc-450 px-2 py-0.5 rounded">
-                      {item.duration}
-                    </div>
-
-                    {/* Aspect Badge (9:16 or 16:9) */}
-                    <div className={`absolute top-3 left-3 border text-[9px] font-mono font-bold px-2 py-0.5 rounded ${
-                      item.aspectRatio === '9:16' 
-                        ? 'bg-brand-red/10 border-brand-red/40 text-brand-red' 
-                        : 'bg-zinc-900/60 border-zinc-850 text-zinc-400'
-                    }`}>
-                      {item.aspectRatio}
-                    </div>
-
-                    {/* Hover Play Icon Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 bg-black/10">
-                      <div className="w-11 h-11 rounded-full bg-brand-red text-white flex items-center justify-center shadow-[0_0_15px_rgba(229,9,20,0.5)] transform scale-95 group-hover:scale-100 transition-transform duration-300">
-                        <Play className="w-4 h-4 fill-white ml-0.5" />
-                      </div>
-                    </div>
+                  {/* Duration Badge */}
+                  <div className="absolute bottom-3 right-3 bg-black/80 border border-zinc-900 text-[9px] font-mono text-zinc-450 px-2 py-0.5 rounded">
+                    {item.duration}
                   </div>
 
-                  {/* Text Meta Content */}
-                  <div className="p-5 bg-zinc-950/40 border-t border-zinc-900/20">
-                    <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
-                      {item.category === 'reels_campaigns' && 'Reels & Campaigns'}
-                      {item.category === 'saas_videos' && 'SaaS Product Video'}
-                      {item.category === 'intro_videos' && 'Timeline & Intros'}
-                      {item.category === 'client_projects' && 'Client Production'}
-                    </span>
-                    <h3 className="text-sm sm:text-base font-bold text-white tracking-tight uppercase group-hover:text-brand-red transition-colors duration-300 truncate">
-                      {item.title}
-                    </h3>
-                    <div className="flex justify-between items-center mt-3.5 pt-3 border-t border-zinc-900/40">
-                      <span className="text-[10px] text-zinc-550 font-mono">CLIENT</span>
-                      <span className="text-[10px] font-medium text-zinc-400 font-mono">{item.client}</span>
+                  {/* Aspect Badge (9:16 or 16:9) */}
+                  <div className={`absolute top-3 left-3 border text-[9px] font-mono font-bold px-2 py-0.5 rounded ${
+                    item.aspectRatio === '9:16' 
+                      ? 'bg-brand-red/10 border-brand-red/40 text-brand-red' 
+                      : 'bg-zinc-900/60 border-zinc-850 text-zinc-400'
+                  }`}>
+                    {item.aspectRatio}
+                  </div>
+
+                  {/* Hover Play Icon Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 bg-black/10">
+                    <div className="w-11 h-11 rounded-full bg-brand-red text-white flex items-center justify-center shadow-[0_0_15px_rgba(229,9,20,0.5)] transform scale-95 group-hover:scale-100 transition-transform duration-300">
+                      <Play className="w-4 h-4 fill-white ml-0.5" />
                     </div>
                   </div>
                 </div>
-              </ScrollReveal>
-            </div>
+
+                {/* Text Meta Content */}
+                <div className="p-5 bg-zinc-950/40 border-t border-zinc-900/20">
+                  <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
+                    {item.category === 'reels_campaigns' && 'Reels & Campaigns'}
+                    {item.category === 'saas_videos' && 'SaaS Product Video'}
+                    {item.category === 'intro_videos' && 'Timeline & Intros'}
+                    {item.category === 'client_projects' && 'Client Production'}
+                  </span>
+                  <h3 className="text-sm sm:text-base font-bold text-white tracking-tight uppercase group-hover:text-brand-red transition-colors duration-300 truncate">
+                    {item.title}
+                  </h3>
+                  <div className="flex justify-between items-center mt-3.5 pt-3 border-t border-zinc-900/40">
+                    <span className="text-[10px] text-zinc-550 font-mono">CLIENT</span>
+                    <span className="text-[10px] font-medium text-zinc-400 font-mono">{item.client}</span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

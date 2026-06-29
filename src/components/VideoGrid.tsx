@@ -26,7 +26,7 @@ export default function VideoGrid() {
       title: 'DAY1 FINAL',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1kt04t1pHMq5o4abpLrUtCK_WBRPhmu_T&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1kt04t1pHMq5o4abpLrUtCK_WBRPhmu_T/preview',
       aspectRatio: '9:16',
       duration: '0:30'
@@ -36,7 +36,7 @@ export default function VideoGrid() {
       title: 'Day 2 ZOMATO',
       client: 'Zomato',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1pAGnVhUabToauSTHxSau9XpXMK22PDVs&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1pAGnVhUabToauSTHxSau9XpXMK22PDVs/preview',
       aspectRatio: '9:16',
       duration: '0:45'
@@ -46,7 +46,7 @@ export default function VideoGrid() {
       title: 'Day 3 nayka',
       client: 'Nykaa',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=14IkuaXeIKzmkkcHjbxn9XwnTbL38rxIv&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/14IkuaXeIKzmkkcHjbxn9XwnTbL38rxIv/preview',
       aspectRatio: '9:16',
       duration: '0:40'
@@ -56,7 +56,7 @@ export default function VideoGrid() {
       title: 'Day 4',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=166eyh1yWDC_SOkIUKSGVMQbPyXfcf9wP&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/166eyh1yWDC_SOkIUKSGVMQbPyXfcf9wP/preview',
       aspectRatio: '9:16',
       duration: '0:35'
@@ -66,7 +66,7 @@ export default function VideoGrid() {
       title: 'DAY 5 FINAL',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=17zsi8F7E3MXxUvBaw60NkH2qpxISuigl&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/17zsi8F7E3MXxUvBaw60NkH2qpxISuigl/preview',
       aspectRatio: '9:16',
       duration: '0:50'
@@ -76,7 +76,7 @@ export default function VideoGrid() {
       title: 'DAY6',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1ildcHXfal40CLFs5qu9OTHQOwkAm1yZg&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1ildcHXfal40CLFs5qu9OTHQOwkAm1yZg/preview',
       aspectRatio: '9:16',
       duration: '0:45'
@@ -86,7 +86,7 @@ export default function VideoGrid() {
       title: 'DAY7mp4',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1pkP_AQ-ziAlXid6weQrRgazF6r4uSL7T&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1pkP_AQ-ziAlXid6weQrRgazF6r4uSL7T/preview',
       aspectRatio: '9:16',
       duration: '0:30'
@@ -96,7 +96,7 @@ export default function VideoGrid() {
       title: 'DAY8',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1502472545319-9a2df6ef72e8?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1J5-vH8Wy9qPANtfgaTvp6YdpL3uwBmMr&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1J5-vH8Wy9qPANtfgaTvp6YdpL3uwBmMr/preview',
       aspectRatio: '9:16',
       duration: '1:00'
@@ -106,7 +106,7 @@ export default function VideoGrid() {
       title: 'CAMPAIGN 1',
       client: 'BrandBoosters',
       category: 'reels_campaigns',
-      thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=19hgtjKim0h5UShqUOSSQNDENFb1-8Wyg&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/19hgtjKim0h5UShqUOSSQNDENFb1-8Wyg/preview',
       aspectRatio: '16:9',
       duration: '1:30'
@@ -117,7 +117,7 @@ export default function VideoGrid() {
       title: 'SAAS VIDEO WITH SFX',
       client: 'SaaS Client',
       category: 'saas_videos',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1K-9ySQlYb-ICJ307dZ30f9IdOEySQCAR&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1K-9ySQlYb-ICJ307dZ30f9IdOEySQCAR/preview',
       aspectRatio: '16:9',
       duration: '2:15'
@@ -127,7 +127,7 @@ export default function VideoGrid() {
       title: 'Service video',
       client: 'Enterprise Client',
       category: 'saas_videos',
-      thumbnail: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc/preview',
       aspectRatio: '16:9',
       duration: '1:45'
@@ -138,7 +138,7 @@ export default function VideoGrid() {
       title: 'INTRO VIDEO',
       client: 'BrandBoosters',
       category: 'intro_videos',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG/preview',
       aspectRatio: '16:9',
       duration: '0:15'
@@ -148,7 +148,7 @@ export default function VideoGrid() {
       title: 'INTRO TIMELINE EDIT',
       client: 'BrandBoosters',
       category: 'intro_videos',
-      thumbnail: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k/preview',
       aspectRatio: '16:9',
       duration: '0:25'
@@ -158,7 +158,7 @@ export default function VideoGrid() {
       title: 'TIME LINE EDIT',
       client: 'BrandBoosters',
       category: 'intro_videos',
-      thumbnail: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p/preview',
       aspectRatio: '16:9',
       duration: '0:35'
@@ -169,7 +169,7 @@ export default function VideoGrid() {
       title: 'Athrav Final V2',
       client: 'Athrav',
       category: 'client_projects',
-      thumbnail: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop',
+      thumbnail: 'https://drive.google.com/thumbnail?id=1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP/preview',
       aspectRatio: '16:9',
       duration: '3:45'

@@ -227,66 +227,70 @@ export default function VideoGrid() {
         </ScrollReveal>
 
         {/* Video Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-8 [column-fill:_balance]">
           {filteredItems.map((item, idx) => (
-            <ScrollReveal key={item.id} delay={100 * (idx % 3)}>
-              <div
-                onClick={() => setSelectedVideo(item)}
-                className="group cursor-pointer bg-zinc-950/30 border border-zinc-900 hover:border-zinc-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.01] flex flex-col justify-between glow-border"
-              >
-                {/* Media Container */}
-                <div className="relative aspect-video bg-zinc-950 overflow-hidden w-full">
-                  {/* Lazy-loaded Cover Thumbnail */}
-                  <img
-                    src={item.thumbnail}
-                    alt={item.title}
-                    className="w-full h-full object-cover opacity-75 group-hover:opacity-85 group-hover:scale-103 transition-all duration-700"
-                    loading="lazy"
-                  />
-                  
-                  {/* Vignette Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10 pointer-events-none" />
-
-                  {/* Duration Badge */}
-                  <div className="absolute bottom-3 right-3 bg-black/80 border border-zinc-900 text-[9px] font-mono text-zinc-450 px-2 py-0.5 rounded">
-                    {item.duration}
-                  </div>
-
-                  {/* Aspect Badge (9:16 or 16:9) */}
-                  <div className={`absolute top-3 left-3 border text-[9px] font-mono font-bold px-2 py-0.5 rounded ${
-                    item.aspectRatio === '9:16' 
-                      ? 'bg-brand-red/10 border-brand-red/40 text-brand-red' 
-                      : 'bg-zinc-900/60 border-zinc-850 text-zinc-400'
+            <div key={item.id} className="break-inside-avoid mb-8">
+              <ScrollReveal delay={100 * (idx % 3)}>
+                <div
+                  onClick={() => setSelectedVideo(item)}
+                  className="group cursor-pointer bg-zinc-950/30 border border-zinc-900 hover:border-zinc-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.01] flex flex-col glow-border"
+                >
+                  {/* Media Container (Dynamic Aspect Ratio for vertical vs widescreen) */}
+                  <div className={`relative bg-zinc-950 overflow-hidden w-full ${
+                    item.aspectRatio === '9:16' ? 'aspect-[9/16]' : 'aspect-video'
                   }`}>
-                    {item.aspectRatio}
+                    {/* Lazy-loaded Cover Thumbnail */}
+                    <img
+                      src={item.thumbnail}
+                      alt={item.title}
+                      className="w-full h-full object-cover opacity-75 group-hover:opacity-85 group-hover:scale-103 transition-all duration-700"
+                      loading="lazy"
+                    />
+                    
+                    {/* Vignette Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-10 pointer-events-none" />
+
+                    {/* Duration Badge */}
+                    <div className="absolute bottom-3 right-3 bg-black/80 border border-zinc-900 text-[9px] font-mono text-zinc-450 px-2 py-0.5 rounded">
+                      {item.duration}
+                    </div>
+
+                    {/* Aspect Badge (9:16 or 16:9) */}
+                    <div className={`absolute top-3 left-3 border text-[9px] font-mono font-bold px-2 py-0.5 rounded ${
+                      item.aspectRatio === '9:16' 
+                        ? 'bg-brand-red/10 border-brand-red/40 text-brand-red' 
+                        : 'bg-zinc-900/60 border-zinc-850 text-zinc-400'
+                    }`}>
+                      {item.aspectRatio}
+                    </div>
+
+                    {/* Hover Play Icon Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 bg-black/10">
+                      <div className="w-11 h-11 rounded-full bg-brand-red text-white flex items-center justify-center shadow-[0_0_15px_rgba(229,9,20,0.5)] transform scale-95 group-hover:scale-100 transition-transform duration-300">
+                        <Play className="w-4 h-4 fill-white ml-0.5" />
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Hover Play Icon Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 bg-black/10">
-                    <div className="w-11 h-11 rounded-full bg-brand-red text-white flex items-center justify-center shadow-[0_0_15px_rgba(229,9,20,0.5)] transform scale-95 group-hover:scale-100 transition-transform duration-300">
-                      <Play className="w-4 h-4 fill-white ml-0.5" />
+                  {/* Text Meta Content */}
+                  <div className="p-5 bg-zinc-950/40 border-t border-zinc-900/20">
+                    <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
+                      {item.category === 'reels_campaigns' && 'Reels & Campaigns'}
+                      {item.category === 'saas_videos' && 'SaaS Product Video'}
+                      {item.category === 'intro_videos' && 'Timeline & Intros'}
+                      {item.category === 'client_projects' && 'Client Production'}
+                    </span>
+                    <h3 className="text-sm sm:text-base font-bold text-white tracking-tight uppercase group-hover:text-brand-red transition-colors duration-300 truncate">
+                      {item.title}
+                    </h3>
+                    <div className="flex justify-between items-center mt-3.5 pt-3 border-t border-zinc-900/40">
+                      <span className="text-[10px] text-zinc-550 font-mono">CLIENT</span>
+                      <span className="text-[10px] font-medium text-zinc-400 font-mono">{item.client}</span>
                     </div>
                   </div>
                 </div>
-
-                {/* Text Meta Content */}
-                <div className="p-5 bg-zinc-950/40 border-t border-zinc-900/20">
-                  <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
-                    {item.category === 'reels_campaigns' && 'Reels & Campaigns'}
-                    {item.category === 'saas_videos' && 'SaaS Product Video'}
-                    {item.category === 'intro_videos' && 'Timeline & Intros'}
-                    {item.category === 'client_projects' && 'Client Production'}
-                  </span>
-                  <h3 className="text-sm sm:text-base font-bold text-white tracking-tight uppercase group-hover:text-brand-red transition-colors duration-300 truncate">
-                    {item.title}
-                  </h3>
-                  <div className="flex justify-between items-center mt-3.5 pt-3 border-t border-zinc-900/40">
-                    <span className="text-[10px] text-zinc-550 font-mono">CLIENT</span>
-                    <span className="text-[10px] font-medium text-zinc-400 font-mono">{item.client}</span>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           ))}
         </div>
       </div>

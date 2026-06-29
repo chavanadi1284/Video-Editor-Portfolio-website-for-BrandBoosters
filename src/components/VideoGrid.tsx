@@ -129,7 +129,7 @@ export default function VideoGrid() {
       category: 'saas_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc/preview',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       duration: '1:45'
     },
     // Intro Videos
@@ -140,7 +140,7 @@ export default function VideoGrid() {
       category: 'intro_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG/preview',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       duration: '0:15'
     },
     {
@@ -150,7 +150,7 @@ export default function VideoGrid() {
       category: 'intro_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k/preview',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       duration: '0:25'
     },
     {
@@ -160,7 +160,7 @@ export default function VideoGrid() {
       category: 'intro_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p/preview',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       duration: '0:35'
     },
     // Client Projects
@@ -171,7 +171,7 @@ export default function VideoGrid() {
       category: 'client_projects',
       thumbnail: 'https://drive.google.com/thumbnail?id=1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP/preview',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       duration: '3:45'
     }
   ]

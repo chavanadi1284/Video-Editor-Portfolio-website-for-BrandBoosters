@@ -1,13 +1,10 @@
 export default function Brands() {
   const brandList = [
-    { name: 'Red Bull Media House', subtitle: 'Sports & Adventure' },
-    { name: 'MKBHD Studios', subtitle: 'Consumer Tech' },
-    { name: 'Acquisition.com', subtitle: 'Business Education' },
-    { name: 'Beast Philanthropy', subtitle: 'Entertainment & Charity' },
-    { name: 'Logitech G', subtitle: 'Gaming & Hardware' },
-    { name: 'Ali Abdaal', subtitle: 'Productivity Media' },
-    { name: 'Gadzhi Media', subtitle: 'Educational Content' },
-    { name: 'Riot Games', subtitle: 'Esports Broadcasts' }
+    { name: 'BrandBoosters Marketing', subtitle: 'Growth Agency' },
+    { name: "Eddie's Liquor N' More", subtitle: 'Retail & Spirits' },
+    { name: 'Lilac Cafe', subtitle: 'Food & Beverage' },
+    { name: 'Happy Cycle', subtitle: 'Fitness & Lifestyle' },
+    { name: 'Kore Mobile', subtitle: 'Telecommunications' }
   ]
 
   // Duplicate the array to create a seamless infinite scroll loop

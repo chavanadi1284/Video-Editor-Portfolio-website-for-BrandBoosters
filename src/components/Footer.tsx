@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Logo Branding */}
         <div className="text-left">
           <div className="font-display font-black text-xl tracking-tighter text-white">
-            BRAND<span className="text-brand-red text-glow-red">BOOSTERS</span>
+            OM <span className="text-brand-red text-glow-red">PARAB</span>
           </div>
           <p className="text-[10px] font-mono text-zinc-600 mt-1 uppercase tracking-widest">
             weapons of mass attention © {new Date().getFullYear()}

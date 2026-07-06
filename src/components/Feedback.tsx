@@ -20,7 +20,7 @@ export default function Feedback() {
       name: 'Marcus Thorne',
       role: 'Head of Content, TechStudio',
       rating: 5,
-      comment: 'BrandBoosters transformed our edit flow. Their pacing structure raised our 30-second retention rate from 40% to 68%. Color grading is cinematic and consistent.',
+      comment: 'Om Parab transformed our edit flow. Their pacing structure raised our 30-second retention rate from 40% to 68%. Color grading is cinematic and consistent.',
       date: 'June 2, 2026',
       avatarInitials: 'MT',
       metric: '+70% Retention'

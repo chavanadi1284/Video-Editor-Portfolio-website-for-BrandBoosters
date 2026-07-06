@@ -36,7 +36,6 @@ export default function Header() {
   }
 
   const navLinks = [
-    { name: 'Showreel', target: 'showreel' },
     { name: 'Services', target: 'services' },
     { name: 'Portfolio', target: 'portfolio' },
     { name: 'Feedback', target: 'feedback' },
@@ -58,7 +57,7 @@ export default function Header() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="font-display font-black text-xl tracking-tighter text-white hover:opacity-90 transition-opacity flex items-center gap-1 cursor-pointer"
         >
-          BRAND<span className="text-brand-red text-glow-red">BOOSTERS</span>
+          OM <span className="text-brand-red text-glow-red">PARAB</span>
         </button>
 
         {/* Desktop Nav Links */}

@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Preloader from './components/Preloader'
 import Hero from './components/Hero'
-import Showreel from './components/Showreel'
 import Services from './components/Services'
 import Brands from './components/Brands'
 import VideoGrid from './components/VideoGrid'
@@ -27,8 +26,7 @@ function App() {
         {/* Hero Banner w/ Ambient Video Loop */}
         <Hero />
 
-        {/* Cinema Player Master Showreel (Interactive selector list) */}
-        <Showreel />
+
 
         {/* Core Services w/ Live Interactive Preview & Before/After Slider */}
         <Services />

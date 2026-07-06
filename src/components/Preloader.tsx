@@ -59,7 +59,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         
         {/* Animated Brand Logo */}
         <div className="font-display font-black text-3xl tracking-tighter text-white uppercase select-none animate-pulse mb-8">
-          BRAND<span className="text-brand-red text-glow-red">BOOSTERS</span>
+          OM <span className="text-brand-red text-glow-red">PARAB</span>
         </div>
 
         {/* Outer Progress Tracker */}

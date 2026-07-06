@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="relative z-20 text-center max-w-5xl mx-auto mt-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-zinc-800 bg-zinc-950/80 text-zinc-400 text-xs font-medium tracking-wider uppercase mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
-          BrandBoosters Studio
+          Om Parab Studio
         </div>
 
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-[0.95] text-white">
@@ -60,11 +60,11 @@ export default function Hero() {
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
-            onClick={() => scrollToSection('showreel')}
+            onClick={() => scrollToSection('portfolio')}
             className="group relative px-8 py-4 bg-brand-red hover:bg-red-700 text-white font-bold rounded-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(229,9,20,0.45)] flex items-center gap-3 w-full sm:w-auto justify-center cursor-pointer"
           >
             <Play className="w-4 h-4 fill-white" />
-            <span>EXPLORE SHOWREEL</span>
+            <span>VIEW PORTFOLIO</span>
           </button>
           
           <button
@@ -79,7 +79,7 @@ export default function Hero() {
 
       {/* Scroll Down Mouse Indicator */}
       <div 
-        onClick={() => scrollToSection('showreel')}
+        onClick={() => scrollToSection('services')}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 cursor-pointer opacity-40 hover:opacity-100 transition-opacity duration-300 hidden sm:flex"
       >
         <span className="text-zinc-500 text-[10px] tracking-widest font-mono uppercase">SCROLL</span>

@@ -24,7 +24,7 @@ export default function VideoGrid() {
     {
       id: 'rc1',
       title: 'DAY1 FINAL',
-      client: 'BrandBoosters',
+      client: 'BrandBoosters Marketing',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=1kt04t1pHMq5o4abpLrUtCK_WBRPhmu_T&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1kt04t1pHMq5o4abpLrUtCK_WBRPhmu_T/preview',
@@ -34,7 +34,7 @@ export default function VideoGrid() {
     {
       id: 'rc2',
       title: 'Day 2 ZOMATO',
-      client: 'Zomato',
+      client: 'Lilac Cafe',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=1pAGnVhUabToauSTHxSau9XpXMK22PDVs&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1pAGnVhUabToauSTHxSau9XpXMK22PDVs/preview',
@@ -44,7 +44,7 @@ export default function VideoGrid() {
     {
       id: 'rc3',
       title: 'Day 3 nayka',
-      client: 'Nykaa',
+      client: 'Kore Mobile',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=14IkuaXeIKzmkkcHjbxn9XwnTbL38rxIv&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/14IkuaXeIKzmkkcHjbxn9XwnTbL38rxIv/preview',
@@ -54,7 +54,7 @@ export default function VideoGrid() {
     {
       id: 'rc4',
       title: 'Day 4',
-      client: 'BrandBoosters',
+      client: 'BrandBoosters Marketing',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=166eyh1yWDC_SOkIUKSGVMQbPyXfcf9wP&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/166eyh1yWDC_SOkIUKSGVMQbPyXfcf9wP/preview',
@@ -64,7 +64,7 @@ export default function VideoGrid() {
     {
       id: 'rc5',
       title: 'DAY 5 FINAL',
-      client: 'BrandBoosters',
+      client: 'Happy Cycle',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=17zsi8F7E3MXxUvBaw60NkH2qpxISuigl&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/17zsi8F7E3MXxUvBaw60NkH2qpxISuigl/preview',
@@ -74,7 +74,7 @@ export default function VideoGrid() {
     {
       id: 'rc6',
       title: 'DAY6',
-      client: 'BrandBoosters',
+      client: 'BrandBoosters Marketing',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=1ildcHXfal40CLFs5qu9OTHQOwkAm1yZg&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1ildcHXfal40CLFs5qu9OTHQOwkAm1yZg/preview',
@@ -84,7 +84,7 @@ export default function VideoGrid() {
     {
       id: 'rc7',
       title: 'DAY7mp4',
-      client: 'BrandBoosters',
+      client: 'Happy Cycle',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=1pkP_AQ-ziAlXid6weQrRgazF6r4uSL7T&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1pkP_AQ-ziAlXid6weQrRgazF6r4uSL7T/preview',
@@ -94,7 +94,7 @@ export default function VideoGrid() {
     {
       id: 'rc8',
       title: 'DAY8',
-      client: 'BrandBoosters',
+      client: "Eddie's Liquor N' More",
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=1J5-vH8Wy9qPANtfgaTvp6YdpL3uwBmMr&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1J5-vH8Wy9qPANtfgaTvp6YdpL3uwBmMr/preview',
@@ -104,7 +104,7 @@ export default function VideoGrid() {
     {
       id: 'rc9',
       title: 'CAMPAIGN 1',
-      client: 'BrandBoosters',
+      client: 'BrandBoosters Marketing',
       category: 'reels_campaigns',
       thumbnail: 'https://drive.google.com/thumbnail?id=19hgtjKim0h5UShqUOSSQNDENFb1-8Wyg&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/19hgtjKim0h5UShqUOSSQNDENFb1-8Wyg/preview',
@@ -115,7 +115,7 @@ export default function VideoGrid() {
     {
       id: 'sv1',
       title: 'SAAS VIDEO WITH SFX',
-      client: 'SaaS Client',
+      client: 'Kore Mobile',
       category: 'saas_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1K-9ySQlYb-ICJ307dZ30f9IdOEySQCAR&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1K-9ySQlYb-ICJ307dZ30f9IdOEySQCAR/preview',
@@ -125,7 +125,7 @@ export default function VideoGrid() {
     {
       id: 'sv2',
       title: 'Service video',
-      client: 'Enterprise Client',
+      client: 'Lilac Cafe',
       category: 'saas_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1lrcR8J80R1urnm9cheWiWhyrnsdHM3Gc/preview',
@@ -136,7 +136,7 @@ export default function VideoGrid() {
     {
       id: 'iv1',
       title: 'INTRO VIDEO',
-      client: 'BrandBoosters',
+      client: 'BrandBoosters Marketing',
       category: 'intro_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1TfGwmjqwXHTmcNkD5sx9tCAeaMjLhrUG/preview',
@@ -146,7 +146,7 @@ export default function VideoGrid() {
     {
       id: 'iv2',
       title: 'INTRO TIMELINE EDIT',
-      client: 'BrandBoosters',
+      client: "Eddie's Liquor N' More",
       category: 'intro_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1f1qzDFwejc10lXRjWbVRTDNoyqYgq28k/preview',
@@ -156,7 +156,7 @@ export default function VideoGrid() {
     {
       id: 'iv3',
       title: 'TIME LINE EDIT',
-      client: 'BrandBoosters',
+      client: 'Lilac Cafe',
       category: 'intro_videos',
       thumbnail: 'https://drive.google.com/thumbnail?id=1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1s_DuyO-8yUb7oC_W6VAUpFAR6Av65U9p/preview',
@@ -167,7 +167,7 @@ export default function VideoGrid() {
     {
       id: 'cp1',
       title: 'Athrav Final V2',
-      client: 'Athrav',
+      client: 'Happy Cycle',
       category: 'client_projects',
       thumbnail: 'https://drive.google.com/thumbnail?id=1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP&sz=w800',
       videoUrl: 'https://drive.google.com/file/d/1VmwhBq4pqn_m6CWckMOY-2b2RZI4qUwP/preview',

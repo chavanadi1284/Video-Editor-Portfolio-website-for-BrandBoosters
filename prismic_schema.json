@@ -1,0 +1,63 @@
+{
+  "Main": {
+    "title": {
+      "type": "Text",
+      "config": {
+        "label": "Title",
+        "placeholder": "Enter video title (e.g. DAY1 FINAL)"
+      }
+    },
+    "client": {
+      "type": "Text",
+      "config": {
+        "label": "Client",
+        "placeholder": "Enter client name (e.g. Lilac Cafe)"
+      }
+    },
+    "category": {
+      "type": "Select",
+      "config": {
+        "label": "Category",
+        "options": [
+          "reels_campaigns",
+          "saas_videos",
+          "intro_videos",
+          "client_projects"
+        ],
+        "default_value": "reels_campaigns"
+      }
+    },
+    "video_url": {
+      "type": "Text",
+      "config": {
+        "label": "Video URL",
+        "placeholder": "Google Drive preview link (e.g. https://drive.google.com/file/d/FILE_ID/preview)"
+      }
+    },
+    "thumbnail_url": {
+      "type": "Text",
+      "config": {
+        "label": "Thumbnail URL",
+        "placeholder": "Image URL (e.g. https://drive.google.com/thumbnail?id=FILE_ID&sz=w800)"
+      }
+    },
+    "aspect_ratio": {
+      "type": "Select",
+      "config": {
+        "label": "Aspect Ratio",
+        "options": [
+          "9:16",
+          "16:9"
+        ],
+        "default_value": "9:16"
+      }
+    },
+    "duration": {
+      "type": "Text",
+      "config": {
+        "label": "Duration",
+        "placeholder": "Video duration (e.g. 0:30)"
+      }
+    }
+  }
+}

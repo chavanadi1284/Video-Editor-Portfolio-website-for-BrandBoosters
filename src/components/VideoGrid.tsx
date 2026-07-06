@@ -18,6 +18,12 @@ interface VideoItem {
 export default function VideoGrid() {
   const [activeFilter, setActiveFilter] = useState<Category>('all')
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
+  const [iframeLoading, setIframeLoading] = useState(true)
+
+  const openVideo = (item: VideoItem) => {
+    setIframeLoading(true)
+    setSelectedVideo(item)
+  }
 
   const portfolioItems: VideoItem[] = [
     // ReelsCampaigns
@@ -231,7 +237,7 @@ export default function VideoGrid() {
           {filteredItems.map((item, idx) => (
             <ScrollReveal key={item.id} delay={100 * (idx % 3)}>
               <div
-                onClick={() => setSelectedVideo(item)}
+                onClick={() => openVideo(item)}
                 className="group cursor-pointer bg-zinc-950/30 border border-zinc-900 hover:border-zinc-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.01] flex flex-col justify-between glow-border"
               >
                 {/* Media Container (Uniform widescreen aspect ratio for clean presentation) */}
@@ -328,6 +334,12 @@ export default function VideoGrid() {
                 <div className="flex-1 bg-black flex items-center justify-center p-4 min-h-[450px]">
                   <div className="relative h-full aspect-[9/16] max-h-[520px] rounded-[32px] border border-zinc-800 overflow-hidden bg-zinc-950 shadow-2xl flex flex-col justify-between">
                     <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-black rounded-full z-20" />
+                    {iframeLoading && (
+                      <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-zinc-950/95 gap-3.5">
+                        <div className="w-8 h-8 border-2 border-zinc-800 border-t-brand-red rounded-full animate-spin" />
+                        <span className="text-[9px] font-mono tracking-widest text-zinc-555 uppercase animate-pulse">Loading Stream...</span>
+                      </div>
+                    )}
                     <iframe
                       className="w-full h-full absolute inset-0"
                       src={selectedVideo.videoUrl}
@@ -335,6 +347,7 @@ export default function VideoGrid() {
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       allowFullScreen
+                      onLoad={() => setIframeLoading(false)}
                     />
                   </div>
                 </div>
@@ -373,14 +386,23 @@ export default function VideoGrid() {
               </div>
             ) : (
               /* If 16:9 standard cinematic video iframe */
-              <iframe
-                className="w-full h-full"
-                src={selectedVideo.videoUrl}
-                title={selectedVideo.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
+              <div className="relative w-full h-full">
+                {iframeLoading && (
+                  <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-zinc-950/95 gap-3.5">
+                    <div className="w-10 h-10 border-2 border-zinc-800 border-t-brand-red rounded-full animate-spin" />
+                    <span className="text-[10px] font-mono tracking-widest text-zinc-555 uppercase animate-pulse">Loading Secure Stream...</span>
+                  </div>
+                )}
+                <iframe
+                  className="w-full h-full"
+                  src={selectedVideo.videoUrl}
+                  title={selectedVideo.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  onLoad={() => setIframeLoading(false)}
+                />
+              </div>
             )}
           </div>
         </div>

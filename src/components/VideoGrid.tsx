@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Play, X, SlidersHorizontal } from 'lucide-react'
 import ScrollReveal from './ScrollReveal'
+import { client } from '../prismic'
 
 type Category = 'all' | 'reels_campaigns' | 'saas_videos' | 'intro_videos' | 'client_projects'
 
@@ -19,11 +20,64 @@ export default function VideoGrid() {
   const [activeFilter, setActiveFilter] = useState<Category>('all')
   const [selectedVideo, setSelectedVideo] = useState<VideoItem | null>(null)
   const [iframeLoading, setIframeLoading] = useState(true)
+  const [prismicItems, setPrismicItems] = useState<VideoItem[]>([])
 
   const openVideo = (item: VideoItem) => {
     setIframeLoading(true)
     setSelectedVideo(item)
   }
+
+  useEffect(() => {
+    if (!client) {
+      console.log("Prismic repository name not set. Running in local fallback mode.")
+      return
+    }
+
+    let isMounted = true
+
+    client.getAllByType('video_item')
+      .then((docs) => {
+        if (!isMounted) return
+
+        const parsedItems: VideoItem[] = docs.map((doc) => {
+          const data = doc.data as any
+          
+          let category: Category = 'reels_campaigns'
+          if (data.category === 'saas_videos' || data.category === 'intro_videos' || data.category === 'client_projects') {
+            category = data.category
+          }
+
+          let thumbnail = ''
+          if (data.thumbnail_url) {
+            thumbnail = data.thumbnail_url
+          } else if (data.thumbnail && data.thumbnail.url) {
+            thumbnail = data.thumbnail.url
+          }
+
+          return {
+            id: doc.id,
+            title: data.title || 'Untitled Video',
+            client: data.client || 'Client Partner',
+            category: category,
+            thumbnail: thumbnail,
+            videoUrl: data.video_url || '',
+            aspectRatio: data.aspect_ratio === '16:9' ? '16:9' : '9:16',
+            duration: data.duration || '0:30'
+          }
+        })
+
+        if (parsedItems.length > 0) {
+          setPrismicItems(parsedItems)
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to load portfolio items from Prismic. Falling back to local database.", err)
+      })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const portfolioItems: VideoItem[] = [
     // ReelsCampaigns
@@ -182,9 +236,11 @@ export default function VideoGrid() {
     }
   ]
 
+  const displayItems = prismicItems.length > 0 ? prismicItems : portfolioItems
+
   const filteredItems = activeFilter === 'all' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeFilter)
+    ? displayItems 
+    : displayItems.filter(item => item.category === activeFilter)
 
   return (
     <section id="portfolio" className="relative py-24 bg-brand-black px-4 sm:px-6 lg:px-8 border-t border-zinc-950">

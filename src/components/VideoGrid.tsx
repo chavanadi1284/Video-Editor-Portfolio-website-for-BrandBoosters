@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Play, X, SlidersHorizontal } from 'lucide-react'
 import ScrollReveal from './ScrollReveal'
 
@@ -13,6 +13,126 @@ interface VideoItem {
   videoUrl: string
   aspectRatio: '16:9' | '9:16'
   duration: string
+}
+
+// Helper to convert Google Drive link to direct download stream link
+const getDirectLink = (url: string) => {
+  if (url.includes('drive.google.com')) {
+    const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/)
+    if (match && match[1]) {
+      return `https://drive.google.com/uc?export=download&id=${match[1]}`
+    }
+  }
+  return url
+}
+
+// Sub-component for play-on-hover video preview
+function VideoCard({ item, setSelectedVideo }: { item: VideoItem; setSelectedVideo: (v: VideoItem) => void }) {
+  const [isHovered, setIsHovered] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const directVideoUrl = getDirectLink(item.videoUrl)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (isHovered) {
+      video.src = directVideoUrl
+      video.load()
+      const playPromise = video.play()
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.log("Hover video play interrupted:", err)
+        })
+      }
+    } else {
+      video.pause()
+      video.src = ""
+    }
+  }, [isHovered, directVideoUrl])
+
+  return (
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={() => setSelectedVideo(item)}
+      className="group cursor-pointer bg-zinc-950/30 border border-zinc-900 hover:border-zinc-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.01] flex flex-col justify-between glow-border h-full"
+    >
+      {/* Media Container (Uniform widescreen aspect ratio for clean presentation) */}
+      <div className="relative aspect-video bg-zinc-950 overflow-hidden w-full flex items-center justify-center">
+        {/* Blurred background (only for vertical 9:16 thumbnails to fill the widescreen gaps beautifully) */}
+        {item.aspectRatio === '9:16' && (
+          <img
+            src={item.thumbnail}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover blur-xl opacity-35 scale-110 pointer-events-none"
+          />
+        )}
+
+        {/* Foreground Thumbnail Image (Fades out when hovered/video plays) */}
+        <img
+          src={item.thumbnail}
+          alt={item.title}
+          className={`absolute inset-0 z-10 w-full h-full opacity-85 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none ${
+            item.aspectRatio === '9:16' ? 'object-contain' : 'object-cover'
+          }`}
+          loading="lazy"
+        />
+
+        {/* Hover Video Preview Player */}
+        <video
+          ref={videoRef}
+          muted
+          loop
+          playsInline
+          className={`absolute inset-0 w-full h-full z-0 transition-opacity duration-500 opacity-0 group-hover:opacity-85 ${
+            item.aspectRatio === '9:16' ? 'object-contain' : 'object-cover'
+          }`}
+        />
+        
+        {/* Vignette Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-15 pointer-events-none" />
+
+        {/* Duration Badge */}
+        <div className="absolute bottom-3 right-3 bg-black/80 border border-zinc-900 text-[9px] font-mono text-zinc-450 px-2 py-0.5 rounded z-20">
+          {item.duration}
+        </div>
+
+        {/* Aspect Badge (9:16 or 16:9) */}
+        <div className={`absolute top-3 left-3 border text-[9px] font-mono font-bold px-2 py-0.5 rounded z-20 ${
+          item.aspectRatio === '9:16' 
+            ? 'bg-brand-red/10 border-brand-red/40 text-brand-red' 
+            : 'bg-zinc-900/60 border-zinc-850 text-zinc-400'
+        }`}>
+          {item.aspectRatio}
+        </div>
+
+        {/* Hover Play Icon Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 bg-black/15">
+          <div className="w-11 h-11 rounded-full bg-brand-red text-white flex items-center justify-center shadow-[0_0_15px_rgba(229,9,20,0.5)] transform scale-95 group-hover:scale-100 transition-transform duration-300">
+            <Play className="w-4 h-4 fill-white ml-0.5" />
+          </div>
+        </div>
+      </div>
+
+      {/* Text Meta Content */}
+      <div className="p-5 bg-zinc-950/40 border-t border-zinc-900/20">
+        <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
+          {item.category === 'reels_campaigns' && 'Reels & Campaigns'}
+          {item.category === 'saas_videos' && 'SaaS Product Video'}
+          {item.category === 'intro_videos' && 'Timeline & Intros'}
+          {item.category === 'client_projects' && 'Client Production'}
+        </span>
+        <h3 className="text-sm sm:text-base font-bold text-white tracking-tight uppercase group-hover:text-brand-red transition-colors duration-300 truncate">
+          {item.title}
+        </h3>
+        <div className="flex justify-between items-center mt-3.5 pt-3 border-t border-zinc-900/40">
+          <span className="text-[10px] text-zinc-550 font-mono">CLIENT</span>
+          <span className="text-[10px] font-medium text-zinc-400 font-mono">{item.client}</span>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default function VideoGrid() {
@@ -230,73 +350,7 @@ export default function VideoGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item, idx) => (
             <ScrollReveal key={item.id} delay={100 * (idx % 3)}>
-              <div
-                onClick={() => setSelectedVideo(item)}
-                className="group cursor-pointer bg-zinc-950/30 border border-zinc-900 hover:border-zinc-800 rounded-xl overflow-hidden shadow-2xl transition-all duration-500 hover:scale-[1.01] flex flex-col justify-between glow-border"
-              >
-                {/* Media Container (Uniform widescreen aspect ratio for clean presentation) */}
-                <div className="relative aspect-video bg-zinc-950 overflow-hidden w-full flex items-center justify-center">
-                  {/* Blurred background (only for vertical 9:16 thumbnails to fill the widescreen gaps beautifully) */}
-                  {item.aspectRatio === '9:16' && (
-                    <img
-                      src={item.thumbnail}
-                      alt=""
-                      className="absolute inset-0 w-full h-full object-cover blur-xl opacity-35 scale-110 pointer-events-none"
-                    />
-                  )}
-
-                  {/* Foreground Thumbnail */}
-                  <img
-                    src={item.thumbnail}
-                    alt={item.title}
-                    className={`relative z-10 opacity-80 group-hover:opacity-95 group-hover:scale-102 transition-all duration-700 ${
-                      item.aspectRatio === '9:16' ? 'h-full max-w-full object-contain' : 'w-full h-full object-cover'
-                    }`}
-                    loading="lazy"
-                  />
-                  
-                  {/* Vignette Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-15 pointer-events-none" />
-
-                  {/* Duration Badge */}
-                  <div className="absolute bottom-3 right-3 bg-black/80 border border-zinc-900 text-[9px] font-mono text-zinc-450 px-2 py-0.5 rounded z-20">
-                    {item.duration}
-                  </div>
-
-                  {/* Aspect Badge (9:16 or 16:9) */}
-                  <div className={`absolute top-3 left-3 border text-[9px] font-mono font-bold px-2 py-0.5 rounded z-20 ${
-                    item.aspectRatio === '9:16' 
-                      ? 'bg-brand-red/10 border-brand-red/40 text-brand-red' 
-                      : 'bg-zinc-900/60 border-zinc-850 text-zinc-400'
-                  }`}>
-                    {item.aspectRatio}
-                  </div>
-
-                  {/* Hover Play Icon Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 bg-black/15">
-                    <div className="w-11 h-11 rounded-full bg-brand-red text-white flex items-center justify-center shadow-[0_0_15px_rgba(229,9,20,0.5)] transform scale-95 group-hover:scale-100 transition-transform duration-300">
-                      <Play className="w-4 h-4 fill-white ml-0.5" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Text Meta Content */}
-                <div className="p-5 bg-zinc-950/40 border-t border-zinc-900/20">
-                  <span className="text-[9px] font-mono text-brand-red uppercase tracking-wider block mb-1">
-                    {item.category === 'reels_campaigns' && 'Reels & Campaigns'}
-                    {item.category === 'saas_videos' && 'SaaS Product Video'}
-                    {item.category === 'intro_videos' && 'Timeline & Intros'}
-                    {item.category === 'client_projects' && 'Client Production'}
-                  </span>
-                  <h3 className="text-sm sm:text-base font-bold text-white tracking-tight uppercase group-hover:text-brand-red transition-colors duration-300 truncate">
-                    {item.title}
-                  </h3>
-                  <div className="flex justify-between items-center mt-3.5 pt-3 border-t border-zinc-900/40">
-                    <span className="text-[10px] text-zinc-550 font-mono">CLIENT</span>
-                    <span className="text-[10px] font-medium text-zinc-400 font-mono">{item.client}</span>
-                  </div>
-                </div>
-              </div>
+              <VideoCard item={item} setSelectedVideo={setSelectedVideo} />
             </ScrollReveal>
           ))}
         </div>
@@ -314,7 +368,7 @@ export default function VideoGrid() {
             <X className="w-5 h-5" />
           </button>
 
-          {/* Dynamic Iframe Panel */}
+          {/* Dynamic Video Panel */}
           <div className={`w-full bg-zinc-950 rounded-xl overflow-hidden border border-zinc-900 shadow-[0_0_40px_rgba(229,9,20,0.2)] flex flex-col md:flex-row items-stretch ${
             selectedVideo.aspectRatio === '9:16'
               ? 'max-w-md aspect-[9/16] md:max-w-3xl md:aspect-auto md:h-[80vh]'
@@ -328,13 +382,13 @@ export default function VideoGrid() {
                 <div className="flex-1 bg-black flex items-center justify-center p-4 min-h-[450px]">
                   <div className="relative h-full aspect-[9/16] max-h-[520px] rounded-[32px] border border-zinc-800 overflow-hidden bg-zinc-950 shadow-2xl flex flex-col justify-between">
                     <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-16 h-3.5 bg-black rounded-full z-20" />
-                    <iframe
-                      className="w-full h-full absolute inset-0"
-                      src={selectedVideo.videoUrl}
+                    <video
+                      className="w-full h-full absolute inset-0 object-cover"
+                      src={getDirectLink(selectedVideo.videoUrl)}
                       title={selectedVideo.title}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
+                      controls
+                      autoPlay
+                      playsInline
                     />
                   </div>
                 </div>
@@ -372,14 +426,14 @@ export default function VideoGrid() {
                 </div>
               </div>
             ) : (
-              /* If 16:9 standard cinematic video iframe */
-              <iframe
-                className="w-full h-full"
-                src={selectedVideo.videoUrl}
+              /* If 16:9 standard cinematic video player */
+              <video
+                className="w-full h-full object-cover"
+                src={getDirectLink(selectedVideo.videoUrl)}
                 title={selectedVideo.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
+                controls
+                autoPlay
+                playsInline
               />
             )}
           </div>

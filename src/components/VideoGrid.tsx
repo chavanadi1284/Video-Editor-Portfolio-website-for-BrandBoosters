@@ -236,7 +236,15 @@ export default function VideoGrid() {
     }
   ]
 
-  const displayItems = prismicItems.length > 0 ? prismicItems : portfolioItems
+  // Merge Prismic items and fallback local items (excluding duplicates by title)
+  const displayItems = [
+    ...prismicItems,
+    ...portfolioItems.filter(localItem => 
+      !prismicItems.some(prismicItem => 
+        prismicItem.title.toLowerCase().trim() === localItem.title.toLowerCase().trim()
+      )
+    )
+  ]
 
   const filteredItems = activeFilter === 'all' 
     ? displayItems 

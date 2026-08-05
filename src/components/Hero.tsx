@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="relative z-20 text-center max-w-5xl mx-auto mt-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-zinc-800 bg-zinc-950/80 text-zinc-400 text-xs font-medium tracking-wider uppercase mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse" />
-          Om Parab Studio
+          Brand Boosters Studio
         </div>
 
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight leading-[0.95] text-white">

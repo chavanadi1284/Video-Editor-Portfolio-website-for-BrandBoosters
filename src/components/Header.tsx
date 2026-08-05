@@ -57,7 +57,7 @@ export default function Header() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="font-display font-black text-xl tracking-tighter text-white hover:opacity-90 transition-opacity flex items-center gap-1 cursor-pointer"
         >
-          OM <span className="text-brand-red text-glow-red">PARAB</span>
+          BRAND <span className="text-brand-red text-glow-red">BOOSTERS</span>
         </button>
 
         {/* Desktop Nav Links */}
